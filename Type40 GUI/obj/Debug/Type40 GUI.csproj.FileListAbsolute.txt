@@ -1,0 +1,9 @@
+c:\users\pxgamer\documents\visual studio 2015\Projects\Type40 GUI\Type40 GUI\bin\Debug\Type40 GUI.exe.config
+c:\users\pxgamer\documents\visual studio 2015\Projects\Type40 GUI\Type40 GUI\bin\Debug\Type40 GUI.exe
+c:\users\pxgamer\documents\visual studio 2015\Projects\Type40 GUI\Type40 GUI\bin\Debug\Type40 GUI.pdb
+c:\users\pxgamer\documents\visual studio 2015\Projects\Type40 GUI\Type40 GUI\obj\Debug\Type40_GUI.Form1.resources
+c:\users\pxgamer\documents\visual studio 2015\Projects\Type40 GUI\Type40 GUI\obj\Debug\Type40_GUI.Properties.Resources.resources
+c:\users\pxgamer\documents\visual studio 2015\Projects\Type40 GUI\Type40 GUI\obj\Debug\Type40 GUI.csproj.GenerateResource.Cache
+c:\users\pxgamer\documents\visual studio 2015\Projects\Type40 GUI\Type40 GUI\obj\Debug\Type40 GUI.exe
+c:\users\pxgamer\documents\visual studio 2015\Projects\Type40 GUI\Type40 GUI\obj\Debug\Type40 GUI.pdb
+C:\Users\PXgamer\documents\visual studio 2015\Projects\Type40 GUI\Type40 GUI\obj\Debug\Type40 GUI.csprojResolveAssemblyReference.cache
