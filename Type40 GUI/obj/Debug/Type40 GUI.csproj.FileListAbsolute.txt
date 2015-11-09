@@ -7,3 +7,4 @@ c:\users\pxgamer\documents\visual studio 2015\Projects\Type40 GUI\Type40 GUI\obj
 c:\users\pxgamer\documents\visual studio 2015\Projects\Type40 GUI\Type40 GUI\obj\Debug\Type40 GUI.exe
 c:\users\pxgamer\documents\visual studio 2015\Projects\Type40 GUI\Type40 GUI\obj\Debug\Type40 GUI.pdb
 C:\Users\PXgamer\documents\visual studio 2015\Projects\Type40 GUI\Type40 GUI\obj\Debug\Type40 GUI.csprojResolveAssemblyReference.cache
+C:\Users\PXgamer\Source\Repos\type40-gui\Type40 GUI\bin\Debug\Type40 GUI.exe.config
