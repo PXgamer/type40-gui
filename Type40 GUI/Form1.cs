@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Text.RegularExpressions;
-using System.IO;
 using System.Windows.Forms;
+using System.Net;
+using System.IO;
+using Newtonsoft.Json.Linq;
+using System.Text.RegularExpressions;
+using System.Xml;
+using Microsoft.VisualBasic;
 
 namespace Type40_GUI
 {
@@ -91,6 +88,29 @@ namespace Type40_GUI
             if (radioButton2.Checked == true)
             {
                 vars.preview = true;
+            }
+            else { }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //IMDB selector
+            var imdbID = Interaction.InputBox("IMDB ID:", "", "");
+
+            if (imdbID != null && imdbID != "")
+            {
+                //Set JSON URL
+                vars.imdbURL = vars.imdbURL + "i=" + imdbID;
+
+                //Download the JSON data from OMDb
+                WebClient c = new WebClient();
+                var data = c.DownloadString(vars.imdbURL);
+                //Console.WriteLine(data);
+                JObject o = JObject.Parse(data);
+
+                vars.finalName =  o["Title"].ToString() + " (" + o["Year"].ToString() + ")";
+                vars.finFilesName = vars.finalName + " [Type40].mp4";
+                textBox2.Text = vars.output + @"\" + vars.finFilesName;
             }
             else { }
         }
