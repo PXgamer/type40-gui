@@ -16,3 +16,4 @@ C:\Users\PXgamer\Source\Repos\type40-gui\Type40 GUI\obj\Debug\Type40_GUI.Propert
 C:\Users\PXgamer\Source\Repos\type40-gui\Type40 GUI\obj\Debug\Type40 GUI.csproj.GenerateResource.Cache
 C:\Users\PXgamer\Source\Repos\type40-gui\Type40 GUI\obj\Debug\Type40 GUI.exe
 C:\Users\PXgamer\Source\Repos\type40-gui\Type40 GUI\obj\Debug\Type40 GUI.pdb
+C:\Users\PXgamer\Source\Repos\type40-gui\Type40 GUI\obj\Debug\Type40 GUI.csprojResolveAssemblyReference.cache
