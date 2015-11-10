@@ -1,2 +1,2 @@
 Current Build Status:
-[![Build status](https://ci.appveyor.com/api/projects/status/cfmgssubm4u7tfp6/branch/master?svg=true)](https://ci.appveyor.com/project/PXgamer/type40-gui/branch/master)
+![Status Badge](https://pxgamer.visualstudio.com/DefaultCollection/_apis/public/build/definitions/2dfa3303-0921-4514-80c4-3b2aa36c5933/3/badge)
