@@ -1,1 +1,11 @@
 image: csharp
+
+stages:
+  - build
+
+job1:
+    stage: build
+    only: 
+      - master
+    script:
+      - ms-build Type40 GUI.sln
