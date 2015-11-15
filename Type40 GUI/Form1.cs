@@ -33,7 +33,14 @@ namespace Type40_GUI
             if (result == DialogResult.OK) // Check result.
             {
                 vars.output = folderBrowserDialog1.SelectedPath;
-                vars.finalName = Regex.Split(vars.filesName, @"([0-9]{4})")[0] + "(" +Regex.Split(vars.filesName, @"([0-9]{4})")[1] + ")";
+                try
+                {
+                    vars.finalName = Regex.Split(vars.filesName, @"([0-9]{4})")[0] + "(" + Regex.Split(vars.filesName, @"([0-9]{4})")[1] + ")";
+                }
+                catch
+                {
+
+                }
                 try
                 {
                     vars.finalName = vars.finalName.Replace(".", " ");
@@ -49,6 +56,7 @@ namespace Type40_GUI
 
         private void button3_Click(object sender, EventArgs e)
         {
+            vars.output = textBox2.Text;
             string previewMode = "";
             if (vars.preview == true)
             {
@@ -62,7 +70,7 @@ namespace Type40_GUI
             strCmdText = "HandBrakeCLI.exe -i " + '\u0022' +
             vars.input + '\u0022' +
             " -o " + '\u0022' +
-            vars.output + @"\" + vars.finFilesName + '\u0022' +
+            vars.output + '\u0022' +
             " -E fdk_faac -A " + '\u0022' + "English" + '\u0022' + " - B 384k --mixdown 6ch -R 48 -e x264 -q 25 -r 23.976 --cfr -x level=4.1:cabac=1:ref=5:analyse=0x133:me=umh:subme=9:chroma-me=1:deadzone-inter=21:deadzone-intra=11:b-adapt=2:rc-lookahead=60:vbv-maxrate=10000:vbv-bufsize=10000:qpmax=69:bframes=4:b-adapt=2:direct=auto:crf-max=51:weightp=2:merange=24:chroma-qp-offset=-1:sync-lookahead=2:psy-rd=1.00,0.15:trellis=2:min-keyint=23:partitions=all" + previewMode;
             
             System.Diagnostics.Process.Start("CMD.exe", strCmdText);
