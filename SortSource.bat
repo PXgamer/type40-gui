@@ -1,6 +1,6 @@
 @echo off &setlocal
 set dir=%1
-set "extlist=.mkv|.mp4|.bat|"
+set "extlist=.mkv|.mp4|.bat|.srt|"
 for /r %dir% %%i in (*) do (
     set "fname=%%~i"
     setlocal enabledelayedexpansion
