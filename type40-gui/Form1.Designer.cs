@@ -193,8 +193,10 @@
             this.webBrowser1.ScrollBarsEnabled = false;
             this.webBrowser1.Size = new System.Drawing.Size(100, 20);
             this.webBrowser1.TabIndex = 10;
-            this.webBrowser1.Url = new System.Uri("https://pxgamer.visualstudio.com/DefaultCollection/_apis/public/build/definitions" +
-        "/2dfa3303-0921-4514-80c4-3b2aa36c5933/3/badge", System.UriKind.Absolute);
+            this.webBrowser1.Url = new System.Uri(
+                "https://img.shields.io/travis/pxgamer/type40-gui/master.svg?style=flat-square",
+                System.UriKind.Absolute
+            );
             this.webBrowser1.WebBrowserShortcutsEnabled = false;
             // 
             // label3
