@@ -90,7 +90,7 @@ namespace Type40_GUI
                 //Console.WriteLine(data);
                 JObject o = JObject.Parse(data);
 
-                vars.finalName =  o["Title"].ToString() + " (" + o["Year"].ToString() + ")";
+                vars.finalName =  o["Title"] + " (" + o["Year"] + ")";
                 vars.finFilesName = vars.finalName + " [Type40].mp4";
                 textBox2.Text = vars.output + @"\" + vars.finFilesName;
             }
