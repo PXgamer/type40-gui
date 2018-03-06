@@ -79,7 +79,7 @@ namespace Type40_GUI
             //IMDB selector
             var imdbId = Interaction.InputBox("IMDB ID:", "", "");
 
-            if (imdbId != null && imdbId != "")
+            if (!imdbId.IsNullOrEmpty())
             {
                 //Set JSON URL
                 vars.imdbURL = vars.imdbURL + "i=" + imdbId;
