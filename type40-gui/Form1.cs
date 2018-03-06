@@ -80,12 +80,12 @@ namespace Type40_GUI
         private void button4_Click(object sender, EventArgs e)
         {
             //IMDB selector
-            var imdbID = Interaction.InputBox("IMDB ID:", "", "");
+            var imdbId = Interaction.InputBox("IMDB ID:", "", "");
 
-            if (imdbID != null && imdbID != "")
+            if (imdbId != null && imdbId != "")
             {
                 //Set JSON URL
-                vars.imdbURL = vars.imdbURL + "i=" + imdbID;
+                vars.imdbURL = vars.imdbURL + "i=" + imdbId;
 
                 //Download the JSON data from OMDb
                 WebClient c = new WebClient();
