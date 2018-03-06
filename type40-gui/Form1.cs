@@ -60,7 +60,7 @@ namespace Type40_GUI
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton1.Checked == true)
+            if (radioButton1.Checked)
             {
                 vars.preview = false;
             }
@@ -68,7 +68,7 @@ namespace Type40_GUI
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton2.Checked == true)
+            if (radioButton2.Checked)
             {
                 vars.preview = true;
             }
