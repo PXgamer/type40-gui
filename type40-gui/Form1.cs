@@ -65,7 +65,6 @@ namespace Type40_GUI
             {
                 vars.preview = false;
             }
-            else { }
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -74,7 +73,6 @@ namespace Type40_GUI
             {
                 vars.preview = true;
             }
-            else { }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -97,7 +95,6 @@ namespace Type40_GUI
                 vars.finFilesName = vars.finalName + " [Type40].mp4";
                 textBox2.Text = vars.output + @"\" + vars.finFilesName;
             }
-            else { }
         }
     }
 }
