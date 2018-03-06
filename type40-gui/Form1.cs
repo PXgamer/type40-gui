@@ -41,7 +41,7 @@ namespace Type40_GUI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string previewMode = (Vars.Preview === true) ? " --start-at duration:0 --stop-at duration:60" : "";
+            string previewMode = Vars.Preview ? " --start-at duration:0 --stop-at duration:60" : "";
             string strCmdText = "HandBrakeCLI.exe -i " + '\u0022' +
             Vars.Input + '\u0022' +
             " -o " + '\u0022' +
