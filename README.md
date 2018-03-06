@@ -21,6 +21,6 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/pxgamer/type40-gui/master.svg?style=flat-square
 
-[link-travis]: https://travis-ci.org/pxgamer/:package_name
+[link-travis]: https://travis-ci.org/pxgamer/type40-gui
 [link-author]: https://github.com/pxgamer
 [link-contributors]: ../../contributors
