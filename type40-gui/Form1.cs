@@ -4,7 +4,6 @@ using System.Net;
 using System.IO;
 using Newtonsoft.Json.Linq;
 using System.Text.RegularExpressions;
-using System.Xml;
 using Microsoft.VisualBasic;
 
 namespace Type40_GUI
