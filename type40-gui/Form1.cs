@@ -20,9 +20,9 @@ namespace Type40_GUI
             DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
             if (result == DialogResult.OK) // Check result.
             {
-                vars.input = openFileDialog1.FileName;
-                textBox1.Text = vars.input;
-                vars.filesName = Path.GetFileNameWithoutExtension(vars.input);
+                Vars.Input = openFileDialog1.FileName;
+                textBox1.Text = Vars.Input;
+                Vars.FilesName = Path.GetFileNameWithoutExtension(Vars.Input);
             }
         }
 
@@ -31,21 +31,21 @@ namespace Type40_GUI
             DialogResult result = folderBrowserDialog1.ShowDialog(); // Show the dialog.
             if (result == DialogResult.OK) // Check result.
             {
-                vars.output = folderBrowserDialog1.SelectedPath;
-                vars.finalName = Regex.Split(vars.filesName, @"([0-9]{4})")[0] + "(" +Regex.Split(vars.filesName, @"([0-9]{4})")[1] + ")";
-                vars.finalName = vars.finalName.Replace(".", " ");
-                vars.finFilesName = vars.finalName + " [Type40].mp4";
-                textBox2.Text = vars.output + @"\" + vars.finFilesName;
+                Vars.Output = folderBrowserDialog1.SelectedPath;
+                Vars.FinalName = Regex.Split(Vars.FilesName, @"([0-9]{4})")[0] + "(" +Regex.Split(Vars.FilesName, @"([0-9]{4})")[1] + ")";
+                Vars.FinalName = Vars.FinalName.Replace(".", " ");
+                Vars.FinFilesName = Vars.FinalName + " [Type40].mp4";
+                textBox2.Text = Vars.Output + @"\" + Vars.FinFilesName;
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string previewMode = (vars.preview === true) ? " --start-at duration:0 --stop-at duration:60" : "";
+            string previewMode = (Vars.Preview === true) ? " --start-at duration:0 --stop-at duration:60" : "";
             string strCmdText = "HandBrakeCLI.exe -i " + '\u0022' +
-            vars.input + '\u0022' +
+            Vars.Input + '\u0022' +
             " -o " + '\u0022' +
-            vars.output + @"\" + vars.finFilesName + '\u0022' +
+            Vars.Output + @"\" + Vars.FinFilesName + '\u0022' +
             " -E fdk_faac -A " + '\u0022' + "English" + '\u0022' + " - B 384k --mixdown 6ch -R 48 -e x264 -q 25 -r 23.976 --cfr -x level=4.1:cabac=1:ref=5:analyse=0x133:me=umh:subme=9:chroma-me=1:deadzone-inter=21:deadzone-intra=11:b-adapt=2:rc-lookahead=60:vbv-maxrate=10000:vbv-bufsize=10000:qpmax=69:bframes=4:b-adapt=2:direct=auto:crf-max=51:weightp=2:merange=24:chroma-qp-offset=-1:sync-lookahead=2:psy-rd=1.00,0.15:trellis=2:min-keyint=23:partitions=all" + previewMode;
             
             System.Diagnostics.Process.Start("CMD.exe", strCmdText);
@@ -54,14 +54,14 @@ namespace Type40_GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            vars.preview = false;
+            Vars.Preview = false;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
             {
-                vars.preview = false;
+                Vars.Preview = false;
             }
         }
 
@@ -69,29 +69,29 @@ namespace Type40_GUI
         {
             if (radioButton2.Checked)
             {
-                vars.preview = true;
+                Vars.Preview = true;
             }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             //IMDB selector
-            var imdbId = Interaction.InputBox("IMDB ID:");
+            string imdbId = Interaction.InputBox("IMDB ID:");
 
             if (!String.IsNullOrEmpty(imdbId))
             {
                 //Set JSON URL
-                vars.imdbURL = vars.imdbURL + "i=" + imdbId;
+                Vars.ImdbUrl = Vars.ImdbUrl + "i=" + imdbId;
 
                 //Download the JSON data from OMDb
                 WebClient c = new WebClient();
-                var data = c.DownloadString(vars.imdbURL);
+                string data = c.DownloadString(Vars.ImdbUrl);
                 //Console.WriteLine(data);
                 JObject o = JObject.Parse(data);
 
-                vars.finalName =  o["Title"] + " (" + o["Year"] + ")";
-                vars.finFilesName = vars.finalName + " [Type40].mp4";
-                textBox2.Text = vars.output + @"\" + vars.finFilesName;
+                Vars.FinalName =  o["Title"] + " (" + o["Year"] + ")";
+                Vars.FinFilesName = Vars.FinalName + " [Type40].mp4";
+                textBox2.Text = Vars.Output + @"\" + Vars.FinFilesName;
             }
         }
     }

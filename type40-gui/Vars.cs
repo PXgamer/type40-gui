@@ -1,0 +1,13 @@
+﻿namespace Type40_GUI
+{
+    public static class Vars
+    {
+        public static string Input;
+        public static string Output;
+        public static string FilesName;
+        public static bool Preview;
+        public static string FinFilesName;
+        public static string FinalName;
+        public static string ImdbUrl = "http://www.omdbapi.com/?";
+    }
+}
