@@ -1,3 +1,11 @@
 dist: trusty
 language: csharp
 solution: type40-gui.sln
+deploy:
+  provider: releases
+  api_key:
+    secure: lpGJ3BDMBuWyP+9Hyl1QhVvnYYnGau4eg7BkBS2VulrhoTRKnzjm+NgilIqEM7623TdrzWBUvzOWdkrK/ylre54xZpVMlFa0tme+obXXnqOx0cbJB96MO5CTGpIRdnbsYq9N4d9K4z427N/9cdB9OW/pqp+zlWocW0QHAZS2HvSv0AbqLFts3ec6t0hWCxCufqR5sovfNpEC6fcuwxHpAt1VfqfqEnEc5ltGCp8CdevqCWWaTnJJvfCp/Mjy4y2mpd5KQTO502WfpEy2oIZad/sqtLQE1AopSeaKXpN4DyDKAdcIFaNnp1+26lrV9cYGe+SUgq4HBcMFDESaTo+kMFtoqWEtVpD4qYONa/1CVHq69SmxdSGzMGmdUbn2iEJK3l/UlJ0F6S/MUJWlufJwdgoymAAp5yZRMu2WszVgWsjz30hyW62XEtdnn/4/bl3dvapJDRPapsuC8X/wXBAyXoxMRi1LXQTeyg1S98bc+9bzv1+bFgWalMWZE5QwxevUGK4nm2xA9+6PBBlo+7XUKUks/oPfLmeZXlL4DNkkEWfWz+WpC2VPqF3FNHK1GgbjJRWc/Qza2qWirujFQJ9Oebau1x/ubkpJzaonXCzVAnpAywU+KQSfcjpefgDRFMrOyVRT8Pm1LXbjVDeG4J0qJXHV5f7ScDRDS74QxmnRN+g=
+  file: "type40-gui/bin/Release/type40-gui.exe"
+  on:
+    repo: pxgamer/type40-gui
+    tags: true
