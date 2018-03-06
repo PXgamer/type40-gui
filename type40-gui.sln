@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Type40 GUI", "Type40 GUI\Type40 GUI.csproj", "{D6EBE8E8-C170-4830-981E-2E19309748FA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Type40 GUI", "type40-gui\type40-gui.csproj", "{D6EBE8E8-C170-4830-981E-2E19309748FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
