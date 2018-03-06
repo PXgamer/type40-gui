@@ -34,14 +34,7 @@ namespace Type40_GUI
             {
                 vars.output = folderBrowserDialog1.SelectedPath;
                 vars.finalName = Regex.Split(vars.filesName, @"([0-9]{4})")[0] + "(" +Regex.Split(vars.filesName, @"([0-9]{4})")[1] + ")";
-                try
-                {
-                    vars.finalName = vars.finalName.Replace(".", " ");
-                }
-                catch
-                {
-
-                }
+                vars.finalName = vars.finalName.Replace(".", " ");
                 vars.finFilesName = vars.finalName + " [Type40].mp4";
                 textBox2.Text = vars.output + @"\" + vars.finFilesName;
             }
