@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace Type40_GUI
+namespace pxgamer.Type40
 {
     public partial class Form1 : Form
     {
@@ -29,7 +29,8 @@ namespace Type40_GUI
             if (result == DialogResult.OK) // Check result.
             {
                 Vars.Output = folderBrowserDialog1.SelectedPath;
-                Vars.FinalName = Regex.Split(Vars.FilesName, @"([0-9]{4})")[0] + "(" +Regex.Split(Vars.FilesName, @"([0-9]{4})")[1] + ")";
+                Vars.FinalName = Regex.Split(Vars.FilesName, @"([0-9]{4})")[0] + "(" +
+                                 Regex.Split(Vars.FilesName, @"([0-9]{4})")[1] + ")";
                 Vars.FinalName = Vars.FinalName.Replace(".", " ");
                 Vars.FinFilesName = Vars.FinalName + " [Type40].mp4";
                 textBox2.Text = Vars.Output + @"\" + Vars.FinFilesName;
@@ -40,10 +41,12 @@ namespace Type40_GUI
         {
             string previewMode = Vars.Preview ? " --start-at duration:0 --stop-at duration:60" : "";
             string strCmdText = "HandBrakeCLI.exe -i " + '\u0022' +
-            Vars.Input + '\u0022' +
-            " -o " + '\u0022' +
-            Vars.Output + @"\" + Vars.FinFilesName + '\u0022' +
-            " -E fdk_faac -A " + '\u0022' + "English" + '\u0022' + " - B 384k --mixdown 6ch -R 48 -e x264 -q 25 -r 23.976 --cfr -x level=4.1:cabac=1:ref=5:analyse=0x133:me=umh:subme=9:chroma-me=1:deadzone-inter=21:deadzone-intra=11:b-adapt=2:rc-lookahead=60:vbv-maxrate=10000:vbv-bufsize=10000:qpmax=69:bframes=4:b-adapt=2:direct=auto:crf-max=51:weightp=2:merange=24:chroma-qp-offset=-1:sync-lookahead=2:psy-rd=1.00,0.15:trellis=2:min-keyint=23:partitions=all" + previewMode;
+                                Vars.Input + '\u0022' +
+                                " -o " + '\u0022' +
+                                Vars.Output + @"\" + Vars.FinFilesName + '\u0022' +
+                                " -E fdk_faac -A " + '\u0022' + "English" + '\u0022' +
+                                " - B 384k --mixdown 6ch -R 48 -e x264 -q 25 -r 23.976 --cfr -x level=4.1:cabac=1:ref=5:analyse=0x133:me=umh:subme=9:chroma-me=1:deadzone-inter=21:deadzone-intra=11:b-adapt=2:rc-lookahead=60:vbv-maxrate=10000:vbv-bufsize=10000:qpmax=69:bframes=4:b-adapt=2:direct=auto:crf-max=51:weightp=2:merange=24:chroma-qp-offset=-1:sync-lookahead=2:psy-rd=1.00,0.15:trellis=2:min-keyint=23:partitions=all" +
+                                previewMode;
 
             System.Diagnostics.Process.Start("CMD.exe", strCmdText);
             textBox3.Text = strCmdText;

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Type40_GUI
+namespace pxgamer.Type40
 {
     static class Program
     {

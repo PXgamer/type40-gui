@@ -1,4 +1,4 @@
-﻿namespace Type40_GUI
+﻿namespace pxgamer.Type40
 {
     public static class Vars
     {

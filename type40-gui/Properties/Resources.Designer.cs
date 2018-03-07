@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Type40_GUI.Properties {
+namespace pxgamer.Type40.Properties {
     using System;
     
     
