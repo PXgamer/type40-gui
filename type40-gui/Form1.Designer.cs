@@ -36,7 +36,7 @@ namespace pxgamer.Type40
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.SourceBrowse = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.EncodeButton = new System.Windows.Forms.Button();
@@ -95,13 +95,13 @@ namespace pxgamer.Type40
             //
             // button2
             //
-            this.button2.Location = new System.Drawing.Point(509, 33);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Browse...";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.SourceBrowse.Location = new System.Drawing.Point(509, 33);
+            this.SourceBrowse.Name = "SourceBrowse";
+            this.SourceBrowse.Size = new System.Drawing.Size(75, 23);
+            this.SourceBrowse.TabIndex = 3;
+            this.SourceBrowse.Text = "Browse...";
+            this.SourceBrowse.UseVisualStyleBackColor = true;
+            this.SourceBrowse.Click += new System.EventHandler(this.button2_Click);
             //
             // openFileDialog1
             //
@@ -211,7 +211,7 @@ namespace pxgamer.Type40
             this.Controls.Add(this.EncodeButton);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.SourceBrowse);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -235,7 +235,7 @@ namespace pxgamer.Type40
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button SourceBrowse;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button EncodeButton;
