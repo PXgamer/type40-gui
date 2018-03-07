@@ -162,7 +162,7 @@
             //
             // pictureBox1
             //
-            this.pictureBox1.Image = global::pxgamer.Type40.Properties.Resources._0ixkm7HEY3;
+            this.pictureBox1.Image = global::pxgamer.Type40.Properties.Resources.logo;
             this.pictureBox1.Location = new System.Drawing.Point(16, 175);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(568, 125);
