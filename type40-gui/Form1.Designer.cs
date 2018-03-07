@@ -44,11 +44,11 @@ namespace pxgamer.Type40
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LogoImage = new System.Windows.Forms.PictureBox();
             this.BuildStatus = new System.Windows.Forms.WebBrowser();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoImage)).BeginInit();
             this.SuspendLayout();
             //
             // button1
@@ -164,13 +164,13 @@ namespace pxgamer.Type40
             //
             // pictureBox1
             //
-            this.pictureBox1.Image = global::pxgamer.Type40.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 175);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(568, 125);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.LogoImage.Image = global::pxgamer.Type40.Properties.Resources.logo;
+            this.LogoImage.Location = new System.Drawing.Point(16, 175);
+            this.LogoImage.Name = "LogoImage";
+            this.LogoImage.Size = new System.Drawing.Size(568, 125);
+            this.LogoImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.LogoImage.TabIndex = 7;
+            this.LogoImage.TabStop = false;
             //
             // webBrowser1
             //
@@ -207,7 +207,7 @@ namespace pxgamer.Type40
             this.ClientSize = new System.Drawing.Size(596, 332);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.LogoImage);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
@@ -222,7 +222,7 @@ namespace pxgamer.Type40
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,7 +239,7 @@ namespace pxgamer.Type40
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox LogoImage;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton2;
