@@ -58,7 +58,7 @@ namespace pxgamer.Type40
             this.BrowseButton.TabIndex = 0;
             this.BrowseButton.Text = "Browse...";
             this.BrowseButton.UseVisualStyleBackColor = true;
-            this.BrowseButton.Click += new System.EventHandler(this.button1_Click);
+            this.BrowseButton.Click += new System.EventHandler(this.BrowseButton_Click);
             //
             // label1
             //
@@ -100,7 +100,7 @@ namespace pxgamer.Type40
             this.SourceBrowse.TabIndex = 3;
             this.SourceBrowse.Text = "Browse...";
             this.SourceBrowse.UseVisualStyleBackColor = true;
-            this.SourceBrowse.Click += new System.EventHandler(this.button2_Click);
+            this.SourceBrowse.Click += new System.EventHandler(this.SourceButton_Click);
             //
             // openFileDialog1
             //
@@ -114,7 +114,7 @@ namespace pxgamer.Type40
             this.EncodeButton.TabIndex = 6;
             this.EncodeButton.Text = "Encode...";
             this.EncodeButton.UseVisualStyleBackColor = true;
-            this.EncodeButton.Click += new System.EventHandler(this.button3_Click);
+            this.EncodeButton.Click += new System.EventHandler(this.EncodeButton_Click);
             //
             // radioButton1
             //
@@ -127,7 +127,7 @@ namespace pxgamer.Type40
             this.FullMode.TabStop = true;
             this.FullMode.Text = "Full Mode";
             this.FullMode.UseVisualStyleBackColor = true;
-            this.FullMode.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.FullMode.CheckedChanged += new System.EventHandler(this.FullMode_CheckedChanged);
             //
             // groupBox1
             //
@@ -150,7 +150,7 @@ namespace pxgamer.Type40
             this.PreviewMode.TabIndex = 9;
             this.PreviewMode.Text = "Preview - 1 Minute";
             this.PreviewMode.UseVisualStyleBackColor = true;
-            this.PreviewMode.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.PreviewMode.CheckedChanged += new System.EventHandler(this.PreviewMode_CheckedChanged);
             //
             // textBox3
             //

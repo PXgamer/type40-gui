@@ -12,7 +12,12 @@ namespace pxgamer.Type40
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Vars.Preview = false;
+        }
+
+        private void BrowseButton_Click(object sender, EventArgs e)
         {
             DialogResult result = FileDialog.ShowDialog(); // Show the dialog.
             if (result == DialogResult.OK) // Check result.
@@ -23,7 +28,7 @@ namespace pxgamer.Type40
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void SourceButton_Click(object sender, EventArgs e)
         {
             DialogResult result = folderBrowserDialog1.ShowDialog(); // Show the dialog.
             if (result == DialogResult.OK) // Check result.
@@ -37,7 +42,7 @@ namespace pxgamer.Type40
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void EncodeButton_Click(object sender, EventArgs e)
         {
             string previewMode = Vars.Preview ? " --start-at duration:0 --stop-at duration:60" : "";
             string strCmdText = "HandBrakeCLI.exe -i " + '\u0022' +
@@ -52,12 +57,7 @@ namespace pxgamer.Type40
             OutputCommand.Text = strCmdText;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            Vars.Preview = false;
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void FullMode_CheckedChanged(object sender, EventArgs e)
         {
             if (FullMode.Checked)
             {
@@ -65,7 +65,7 @@ namespace pxgamer.Type40
             }
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void PreviewMode_CheckedChanged(object sender, EventArgs e)
         {
             if (PreviewMode.Checked)
             {
