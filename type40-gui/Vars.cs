@@ -8,6 +8,5 @@
         public static bool Preview;
         public static string FinFilesName;
         public static string FinalName;
-        public static string ImdbUrl = "http://www.omdbapi.com/?";
     }
 }
