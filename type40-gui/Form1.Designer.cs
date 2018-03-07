@@ -1,4 +1,6 @@
-﻿namespace pxgamer.Type40
+﻿using System.Drawing;
+
+namespace pxgamer.Type40
 {
     partial class Form1
     {
@@ -43,7 +45,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.BuildStatus = new System.Windows.Forms.WebBrowser();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -131,7 +133,7 @@
             // groupBox1
             //
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.webBrowser1);
+            this.groupBox1.Controls.Add(this.BuildStatus);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Location = new System.Drawing.Point(16, 61);
@@ -172,21 +174,22 @@
             //
             // webBrowser1
             //
-            this.webBrowser1.AllowNavigation = false;
-            this.webBrowser1.AllowWebBrowserDrop = false;
-            this.webBrowser1.IsWebBrowserContextMenuEnabled = false;
-            this.webBrowser1.Location = new System.Drawing.Point(462, 16);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.ScrollBarsEnabled = false;
-            this.webBrowser1.Size = new System.Drawing.Size(100, 20);
-            this.webBrowser1.TabIndex = 10;
-            this.webBrowser1.Url = new System.Uri(
+            this.BuildStatus.AllowNavigation = false;
+            this.BuildStatus.AllowWebBrowserDrop = false;
+            this.BuildStatus.IsWebBrowserContextMenuEnabled = false;
+            this.BuildStatus.Location = new System.Drawing.Point(462, 16);
+            this.BuildStatus.MinimumSize = new System.Drawing.Size(20, 20);
+            this.BuildStatus.MaximumSize = new System.Drawing.Size(88, 20);
+            this.BuildStatus.Name = "BuildStatus";
+            this.BuildStatus.ScriptErrorsSuppressed = true;
+            this.BuildStatus.ScrollBarsEnabled = false;
+            this.BuildStatus.AutoSize = true;
+            this.BuildStatus.TabIndex = 10;
+            this.BuildStatus.Url = new System.Uri(
                 "https://img.shields.io/travis/pxgamer/type40-gui/master.svg?style=flat-square",
                 System.UriKind.Absolute
             );
-            this.webBrowser1.WebBrowserShortcutsEnabled = false;
+            this.BuildStatus.WebBrowserShortcutsEnabled = false;
             //
             // label3
             //
@@ -241,7 +244,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.WebBrowser BuildStatus;
         private System.Windows.Forms.Label label3;
     }
 }
