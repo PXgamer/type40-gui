@@ -14,11 +14,11 @@ namespace pxgamer.Type40
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
+            DialogResult result = FileDialog.ShowDialog(); // Show the dialog.
             if (result == DialogResult.OK) // Check result.
             {
-                Vars.Input = openFileDialog1.FileName;
-                textBox1.Text = Vars.Input;
+                Vars.Input = FileDialog.FileName;
+                SourceInput.Text = Vars.Input;
                 Vars.FilesName = Path.GetFileNameWithoutExtension(Vars.Input);
             }
         }
@@ -33,7 +33,7 @@ namespace pxgamer.Type40
                                  Regex.Split(Vars.FilesName, @"([0-9]{4})")[1] + ")";
                 Vars.FinalName = Vars.FinalName.Replace(".", " ");
                 Vars.FinFilesName = Vars.FinalName + " [Type40].mp4";
-                textBox2.Text = Vars.Output + @"\" + Vars.FinFilesName;
+                OutputInput.Text = Vars.Output + @"\" + Vars.FinFilesName;
             }
         }
 
@@ -49,7 +49,7 @@ namespace pxgamer.Type40
                                 previewMode;
 
             System.Diagnostics.Process.Start("CMD.exe", strCmdText);
-            textBox3.Text = strCmdText;
+            OutputCommand.Text = strCmdText;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace pxgamer.Type40
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton1.Checked)
+            if (FullMode.Checked)
             {
                 Vars.Preview = false;
             }
@@ -67,7 +67,7 @@ namespace pxgamer.Type40
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton2.Checked)
+            if (PreviewMode.Checked)
             {
                 Vars.Preview = true;
             }
