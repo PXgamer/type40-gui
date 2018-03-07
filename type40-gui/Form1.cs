@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Net;
 using System.IO;
-using Newtonsoft.Json.Linq;
 using System.Text.RegularExpressions;
-using Microsoft.VisualBasic;
 
 namespace Type40_GUI
 {
@@ -47,7 +44,7 @@ namespace Type40_GUI
             " -o " + '\u0022' +
             Vars.Output + @"\" + Vars.FinFilesName + '\u0022' +
             " -E fdk_faac -A " + '\u0022' + "English" + '\u0022' + " - B 384k --mixdown 6ch -R 48 -e x264 -q 25 -r 23.976 --cfr -x level=4.1:cabac=1:ref=5:analyse=0x133:me=umh:subme=9:chroma-me=1:deadzone-inter=21:deadzone-intra=11:b-adapt=2:rc-lookahead=60:vbv-maxrate=10000:vbv-bufsize=10000:qpmax=69:bframes=4:b-adapt=2:direct=auto:crf-max=51:weightp=2:merange=24:chroma-qp-offset=-1:sync-lookahead=2:psy-rd=1.00,0.15:trellis=2:min-keyint=23:partitions=all" + previewMode;
-            
+
             System.Diagnostics.Process.Start("CMD.exe", strCmdText);
             textBox3.Text = strCmdText;
         }
@@ -70,28 +67,6 @@ namespace Type40_GUI
             if (radioButton2.Checked)
             {
                 Vars.Preview = true;
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            //IMDB selector
-            string imdbId = Interaction.InputBox("IMDB ID:");
-
-            if (!String.IsNullOrEmpty(imdbId))
-            {
-                //Set JSON URL
-                Vars.ImdbUrl = Vars.ImdbUrl + "i=" + imdbId;
-
-                //Download the JSON data from OMDb
-                WebClient c = new WebClient();
-                string data = c.DownloadString(Vars.ImdbUrl);
-                //Console.WriteLine(data);
-                JObject o = JObject.Parse(data);
-
-                Vars.FinalName =  o["Title"] + " (" + o["Year"] + ")";
-                Vars.FinFilesName = Vars.FinalName + " [Type40].mp4";
-                textBox2.Text = Vars.Output + @"\" + Vars.FinFilesName;
             }
         }
     }
